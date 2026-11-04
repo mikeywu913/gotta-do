@@ -1,11 +1,11 @@
-# Gotta Do! 0.6.0 测试指南 / Testing guide
+# Gotta Do! 0.7.0 测试指南 / Testing guide
 
 这是 Windows 桌面开发预览版。推荐 Windows 11 x64；Windows 10 x64 尚未完成完整兼容性验证。macOS、Linux、ARM64 未提供测试包。
 
 ## 下载与运行 / Download and run
 
-1. 打开 [Releases](https://github.com/mikeywu913/gotta-do/releases)，选择标记为 Pre-release 的 v0.6.0。
-2. 下载 **Gotta-Do-0.6.0-Windows-Portable.zip**；7z 是同一内容的更小压缩格式，需要相应解压工具。
+1. 打开 [Releases](https://github.com/mikeywu913/gotta-do/releases)，选择标记为 Pre-release 的 v0.7.0。
+2. 下载 **Gotta-Do-0.7.0-Windows-Portable.zip**；7z 是同一内容的更小压缩格式，需要相应解压工具。
 3. 把压缩包完整解压到一个可写目录，再打开里面的 **Gotta Do!.exe**。不要在压缩包内直接运行，不要只复制 EXE。
 4. 运行软件不需要安装 Node.js、npm 或 Git。当前包未签名，Windows 可能显示来源警告；请核对发布地址和随包 SHA256 校验值。组织策略阻止时应联系管理员。
 5. 更新前从旧版右下角托盘菜单选择退出，再运行新目录中的版本。
@@ -22,7 +22,7 @@ Download the named Windows Portable archive from Releases, extract the **whole f
 - 在设置中切换 English，确认任务原文没有被改写。
 - 打开 ✦ AI，输入“明天下午六点半学习英语；完成项目报告”，先使用本机规则提取；检查草稿、批量添加和撤销。
 - AI 云端、云端语音需要自行配置服务商账号与密钥。基础任务与本机规则提取无需 AI 账号。
-- Windows 本机语音识别需要安装对应中/英文语音包；语音方式和配置详见 [AI 使用说明](AI-SETUP.md)。
+- 录音支持暂停、播放、改名和定位本地文件；在输入与录音设置中按需下载 whisper.cpp 引擎和中英文模型，随后可离线转文字，不需要 API Key。详见 [语音与提供商说明](VOICE-AND-PROVIDERS.md)。
 
 ## 数据、已知限制与反馈
 
@@ -38,7 +38,7 @@ Download the named Windows Portable archive from Releases, extract the **whole f
 发布附件附带 SHA256SUMS.txt。PowerShell 示例：
 
 ~~~powershell
-Get-FileHash -Algorithm SHA256 -LiteralPath '.\Gotta-Do-0.6.0-Windows-Portable.zip'
+Get-FileHash -Algorithm SHA256 -LiteralPath '.\Gotta-Do-0.7.0-Windows-Portable.zip'
 ~~~
 
 将 Hash 与校验文件对应条目比较。校验能发现传输损坏，不能代替发布者身份验证。
